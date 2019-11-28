@@ -4,6 +4,7 @@
     <Name>MediatR Query Template</Name>
     <Description>&lt;No description available&gt;</Description>
     <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>AspNetCore</TemplateGroupID>
     <SortOrder>200</SortOrder>
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
