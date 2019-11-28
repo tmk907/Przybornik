@@ -1,0 +1,15 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>MediatRCommandTemplate.cs</DefaultName>
+    <Name>MediatR Command Template</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$Command.cs" ReplaceParameters="true">Command.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$CommandHandler.cs" ReplaceParameters="true">CommandHandler.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

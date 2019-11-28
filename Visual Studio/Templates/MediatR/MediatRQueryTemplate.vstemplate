@@ -1,0 +1,16 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>MediatRQueryTemplate.cs</DefaultName>
+    <Name>MediatR Query Template</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$Query.cs" ReplaceParameters="true">Query.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$QueryHandler.cs" ReplaceParameters="true">QueryHandler.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$Response.cs" ReplaceParameters="true">Response.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

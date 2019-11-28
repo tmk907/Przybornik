@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Bindable Property with propertyChanged event Xamarin Forms</Title>
+			<Shortcut>propbc</Shortcut>
+			<Description>Code snippet for an automatically implemented bindable property with propertyChanged event
+Language Version: C# 3.0 or higher</Description>
+			<Author>tmk907</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>owner</ID>
+					<ToolTip>Type of owner class</ToolTip>
+					<Default>ownerclass</Default>
+					<Function>ClassName()</Function>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+			public static readonly BindableProperty $property$Property =
+				BindableProperty.Create(nameof($property$),
+										typeof($type$),
+										typeof($owner$),
+										default($type$));
+			public $type$ $property$
+			{
+				get { return ($type$)GetValue($property$Property); }
+				set { SetValue($property$Property, value); }
+			}
+			
+			private static void $property$PropertyChanged(BindableObject bindable, object oldValue, object newValue)
+			{
+
+			}
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
