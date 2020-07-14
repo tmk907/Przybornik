@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>CommandHandler for MediatR</Title>
+			<Shortcut>commandh</Shortcut>
+			<Description></Description>
+			<Author>tmk907</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>owner</ID>
+					<ToolTip>Type of owner class</ToolTip>
+					<Default>ownerclass</Default>
+					<Function>ClassName()</Function>
+				</Literal>
+				<Literal>
+					<ID>actionName</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>ActionName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+			public class $actionName$CommandHandler : IRequestHandler<$actionName$Command>
+			{
+				public $actionName$CommandHandler()
+				{
+
+				}
+
+				Task<Unit> IRequestHandler<$actionName$Command, Unit>.Handle($actionName$Command request, CancellationToken cancellationToken)
+				{
+					return Unit.Task;
+				}
+			}
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

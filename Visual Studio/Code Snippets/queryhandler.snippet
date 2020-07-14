@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>QueryHandler for MediatR</Title>
+			<Shortcut>queryh</Shortcut>
+			<Description></Description>
+			<Author>tmk907</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>owner</ID>
+					<ToolTip>Type of owner class</ToolTip>
+					<Default>ownerclass</Default>
+					<Function>ClassName()</Function>
+				</Literal>
+				<Literal>
+					<ID>actionName</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>ActionName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[
+			public class $actionName$QueryHandler : IRequestHandler<$actionName$Query, $actionName$Response>
+			{
+        public  $actionName$QueryHandler()
+				{
+
+				}
+
+				public Task<$actionName$Response> Handle($actionName$Query request, CancellationToken cancellationToken)
+				{
+					throw new NotImplementedException();
+				}
+			}
+			$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
