@@ -36,7 +36,8 @@ Language Version: C# 3.0 or higher</Description>
 				BindableProperty.Create(nameof($property$),
 										typeof($type$),
 										typeof($owner$),
-										default($type$));
+										default($type$),
+										propertyChanged: $property$PropertyChanged);
 			public $type$ $property$
 			{
 				get { return ($type$)GetValue($property$Property); }
